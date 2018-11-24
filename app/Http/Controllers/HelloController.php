@@ -14,6 +14,10 @@ class HelloController extends Controller
      * @return none
      */
     public function index(Request $request, Response $response){
-    	print $response->content();
+    	$data = [
+    		'msg'=>'これはコントローラーから渡された値です。',
+    		'id'=>$request->id
+    	];
+    	return view('hello.index', $data);
     }
 }
