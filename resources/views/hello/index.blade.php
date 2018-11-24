@@ -13,7 +13,8 @@
 	<p>{{$msg}}</p>
 	<form action="/hello" method="post" accept-charset="utf-8">
 	{{csrf_field()}}		
-	<input type="text" name="msg" value="{{old('msg')}}">
+	<input type="text" name="name" value="@isset($name){{$name}}@endisset">
+	{{ Form::text('username') }}
 	<input type="submit">
 	</form>
 </body>

@@ -15,8 +15,8 @@ class HelloController extends Controller
      */
     public function index(Request $request, Response $response){
     	$data = [
-    		'msg'=>'お名前を入力してください。'
-    	];
+    		'msg' => 'お名前を入力してください。',
+       	];
     	return view('hello.index', $data);
     }
 
@@ -27,7 +27,8 @@ class HelloController extends Controller
      */
     public function post(Request $request){
     	$data = [
-    		'msg' => "こんにちは{$request->msg}さん"
+    		'msg' => "こんにちは{$request->name}さん",
+    		'name' => $request->name
     	];
     	return view('hello.index', $data);
     }
