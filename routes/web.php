@@ -29,3 +29,4 @@ Route::get('hello', function(){
 });
 */
 Route::get('hello', 'HelloController@index');
+Route::post('hello', 'HelloController@post');
