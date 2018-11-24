@@ -14,6 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+/*
 Route::get('hello/{msg?}', function($msg = 'no message'){
 	return "<html><body><h1>hello</h1><p>This is ${msg} page.</p></body></html>";
 });
+*/
+Route::get('hello', 'HelloController@index');
